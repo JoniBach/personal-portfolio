@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Theme from "./Theme";
+import Button from "./components/button/Button";
+import Surface from "./components/surface/Surface";
+import Tree from "./components/tree/Tree";
+import { data } from "./mock/tree";
+import Ring from "./components/ring/Ring";
+import { mockCircle } from "./mock/circle";
+import Main from "./pages/main/Main";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <Theme>
+      {/* <Surface> */}
+      {/* <Button onClick={() => alert("hi")}>this is a button</Button> */}
 
+      <Main />
+      {/* </Surface> */}
+    </Theme>
+  );
+};
 export default App;
